@@ -28,7 +28,7 @@ pub fn add_two_numbers(
         if let (Some(link1), Some(link2)) = (node1, node2) {
             let mut sum = link1.val + link2.val + carry;
             carry = sum / 10;
-            sum = sum % 10;
+            sum %= 10;
             *node3 = Some(Box::new(ListNode::new(sum)));
             node1 = &link1.next;
             node2 = &link2.next;
@@ -43,7 +43,7 @@ pub fn add_two_numbers(
         } else if let Some(link1) = node1 {
             let mut sum = link1.val + carry;
             carry = sum / 10;
-            sum = sum % 10;
+            sum %= 10;
             *node3 = Some(Box::new(ListNode::new(sum)));
             node1 = &link1.next;
             match node3 {
@@ -57,7 +57,7 @@ pub fn add_two_numbers(
         } else if let Some(link2) = node2 {
             let mut sum = link2.val + carry;
             carry = sum / 10;
-            sum = sum % 10;
+            sum %= 10;
             *node3 = Some(Box::new(ListNode::new(sum)));
             node2 = &link2.next;
             match node3 {

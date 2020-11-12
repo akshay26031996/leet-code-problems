@@ -26,12 +26,8 @@ impl TreeNode {
 pub fn max_depth(root: Option<Rc<RefCell<TreeNode>>>) -> i32 {
     fn depth(node: &Option<Rc<RefCell<TreeNode>>>) -> i32 {
         match node {
-            None => {
-                return 0;
-            }
-            Some(node) => {
-                return 1 + max(depth(&node.borrow().left), depth(&node.borrow().right));
-            }
+            None => 0,
+            Some(node) => 1 + max(depth(&node.borrow().left), depth(&node.borrow().right)),
         }
     }
     depth(&root)

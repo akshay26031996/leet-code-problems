@@ -15,7 +15,7 @@ pub fn reverse(x: i32) -> i32 {
             break;
         }
         let remainder = input % 10;
-        input = input / 10;
+        input /= 10;
         let (tres, overflown) = res.overflowing_mul(10);
         if overflown {
             return 0;

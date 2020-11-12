@@ -27,12 +27,12 @@ pub fn roman_to_int(s: String) -> i32 {
             eprintln!("{} : {}", c, iter.peek().unwrap());
             let n_val = roman_literal.get(&iter.peek().unwrap()).unwrap();
             if c_val < n_val {
-                res = res - c_val;
+                res -= c_val;
             } else {
-                res = res + c_val;
+                res += c_val;
             }
         } else {
-            res = res + c_val;
+            res += c_val;
         }
     }
     res
