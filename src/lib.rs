@@ -1,5 +1,7 @@
 pub mod add_two_numbers;
 pub mod implement_str_str;
+pub mod inorder_traversal;
+pub mod kids_with_the_greatest_number_of_candies;
 pub mod longest_common_prefix;
 pub mod longest_increasing_subsequence;
 pub mod max_depth_binary_tree;
@@ -12,7 +14,9 @@ pub mod remove_duplicates_from_sorted_array;
 pub mod remove_element;
 pub mod reverse_integer;
 pub mod reverse_string;
+pub mod richest_customer_wealth;
 pub mod roman_to_integer;
+pub mod running_sum_of_1d_array;
 pub mod search_insert_position;
 pub mod subarray_sum_equals_k;
 pub mod subrectangle_queries;
